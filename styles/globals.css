@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title {
+  @apply font-roboto font-bold tracking-widest text-4xl text-theme-purple uppercase mb-24;
+}
+
+.main-title {
+  @apply font-roboto font-bold tracking-wide text-4xl text-theme-purple;
+}
+
+.sub-title {
+  @apply font-roboto font-bold tracking-wider text-tiny text-black uppercase mb-7;
+}
+
+.text {
+  @apply font-roboto font-normal text-base text-black w-11;
+}
+
+.description {
+  @apply font-roboto font-normal text-2xl text-black;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f2f3f8;
+  overflow-x: hidden;
+  user-select: none;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.anime {
+  position: absolute;
+  z-index: 0;
+  background-color: #f2f3f8;
+  box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.3);
+  border-radius: 30% 70% 20% 40%;
+  animation: transform_one 20s ease-in-out infinite both alternate,
+    movement_one 40s ease-in-out infinite both;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*-------------SCROLL-------------*/
+/*--------------------------------*/
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #a0a3bd;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b0b3cf;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+/*-------------FOOTER-------------*/
+/*--------------------------------*/
+
+.footer-waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.footer-content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-image: linear-gradient(#1cd6c0, #35ba99);
+}
+
+.footer-animation > use {
+  animation: move-forever 45s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.footer-animation > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 13s;
+}
+.footer-animation > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 18s;
+}
+.footer-animation > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 21s;
+}
+.footer-animation > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 26s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  .footer-waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .footer-content {
+    height: 30vh;
+  }
+}
+
+/*-------------HEADER-------------*/
+/*--------------------------------*/
+
+.header-waves {
+  position: relative;
+  width: 100%;
+  height: 45vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+  transform: rotate(180deg);
+}
+
+.header-content {
+  position: relative;
+  height: 45vh;
+  text-align: center;
+  background-image: linear-gradient(#1cd6c0, #35ba99);
+}
+
+@media (max-width: 768px) {
+  .header-waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .header-content {
+    height: 30vh;
+  }
+}
+
+/*-------------CARDS-------------*/
+/*--------------------------------*/
+
+.card {
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
