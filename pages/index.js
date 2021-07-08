@@ -33,12 +33,12 @@ export default function Home() {
         />
         <meta
           property="description"
-          content="O OnDisplay é uma plataforma que permite criar e personalizar ecrãs de sinalização digital"
+          content="Sincronize produtos, clientes e encomendas com apenas um clique."
           key="description"
         />
         <meta
           property="keywords"
-          content="OnDisplay, plataforma, criar, editar, apresentar, sinalização, personalizar, temas, widget, digital, tv, corporativa"
+          content="woojasmin, plugin, sincronizar, automatico, personaliza"
           key="keywords"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -54,7 +54,7 @@ export default function Home() {
         >
           <motion.div
             variants={fadeInUp}
-            className="relative flex flex-col justify-center items-start xs:mb-20 md:mb-40"
+            className="w-full max-w-7xl flex flex-col justify-center items-start xs:mb-20 md:mb-40"
           >
             <h1 className="main-title">
               Integre o Software Jasmin com a
