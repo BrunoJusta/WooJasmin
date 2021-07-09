@@ -8,7 +8,7 @@ export const Contacts = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
-  const [city, setCity] = useState("");
+  const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -38,7 +38,7 @@ export const Contacts = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let data = { name, email, company, city, message };
+    let data = { name, email, company, contact, message };
 
     fetch("/api/contact", {
       method: "POST",
@@ -54,7 +54,7 @@ export const Contacts = () => {
         setName("");
         setEmail("");
         setCompany("");
-        setCity("");
+        setNumber("");
         setMessage("");
         window.scrollTo(0, 0);
       } else {
@@ -62,7 +62,7 @@ export const Contacts = () => {
         setName("");
         setEmail("");
         setCompany("");
-        setCity("");
+        setNumber("");
         setMessage("");
       }
     });
@@ -74,18 +74,18 @@ export const Contacts = () => {
     >
       <motion.div
         variants={fadeInUp}
-        className=" flex-col bg-white w-full h-auto py-10 shadow-simple mb-28 flex justify-center items-center"
+        className=" flex-col bg-white w-full h-auto py-10 shadow-base mb-28 flex justify-center items-center"
       >
         <motion.h2 variants={fadeInUp} className="title">
           Fale Connosco
         </motion.h2>
         <form
-          className="flex flex-col justify-between w-9/12 h-3/4"
+          className="flex flex-col justify-between  w-full lg:max-w-screen-md 2xl:max-w-screen-lg p-4 h-3/4"
           onSubmit={(e) => {
             handleSubmit(e);
           }}
         >
-          <div className="flex justify-between items-center lg:flex-row md:flex-col xs:flex-col">
+          <div className="flex justify-between items-center lg:flex-row md:flex-col xs:flex-col ">
             <div className="flex flex-col  xl:w-96 lg:w-72 md:w-full xs:w-full mb-10">
               <label htmlFor="name" className="text-sm text-theme-blue">
                 O seu nome
@@ -121,12 +121,12 @@ export const Contacts = () => {
           </div>
           <div className="flex justify-between items-center lg:flex-row md:flex-col xs:flex-col">
             <div className="flex flex-col  xl:w-96 lg:w-72 md:w-full xs:w-full mb-10">
-              <label htmlFor="message" className="text-sm text-theme-blue">
+              <label htmlFor="company" className="text-sm text-theme-blue">
                 Nome da Empresa
               </label>
               <input
                 type="text"
-                name="message"
+                name="company"
                 placeholder="Nome da empresa"
                 className="px-2 h-9 bg-gray-100 border-1 border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-theme-purple focus:border-transparent"
                 value={company}
@@ -136,22 +136,22 @@ export const Contacts = () => {
               />
             </div>
             <div className="flex flex-col  xl:w-96 lg:w-72 md:w-full xs:w-full mb-10">
-              <label htmlFor="message" className="text-sm text-theme-blue">
-                Cidade
+              <label htmlFor="number" className="text-sm text-theme-blue">
+                Contacto
               </label>
               <input
-                type="text"
-                name="message"
-                placeholder="Porto"
+                type="number"
+                name="number"
+                placeholder="Contacto"
                 className="px-2 h-9 bg-gray-100 border-1 border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-theme-purple focus:border-transparent"
-                value={city}
+                value={number}
                 onChange={(e) => {
-                  setCity(e.target.value);
+                  setNumber(e.target.value);
                 }}
               />
             </div>
           </div>
-          <div className="flex flex-col w-full h-full mb-20">
+          <div className="flex flex-col w-full h-full mb-5">
             <label htmlFor="message" className="text-sm text-theme-blue">
               A sua mensagem
             </label>
@@ -164,10 +164,7 @@ export const Contacts = () => {
               required
             />
           </div>
-          <input
-            type="submit"
-            className="cursor-pointer bg-theme-purple bg-opacity-20 border-theme-purple border-2 rounded-full uppercase text-theme-purple font-semibold px-4 py-1 hover:text-gray-200 hover:bg-theme-purple w-auto self-center"
-          />
+          <input type="submit" className="button button-secondary" />
         </form>
       </motion.div>
       <ToastContainer />

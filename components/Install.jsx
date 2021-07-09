@@ -15,12 +15,12 @@ export const Install = () => {
       >
         <motion.h2
           variants={fadeInUp}
-          className="title text-3xl  font-semibold mb-12 text-center"
+          className="title text-3xl  font-semibold mb-12 text-center w-full max-w-screen-md p-4"
         >
-          implementação feita pelos <br /> nossos técnicos
+          implementação feita pelos nossos técnicos
         </motion.h2>
-        <motion.div className="flex justify-around items-center w-full max-w-7xl">
-          <motion.div className="flex flex-col justify-center items-center">
+        <motion.div className="flex flex-col md:flex-row justify-around items-center w-full lg:max-w-screen-lg 2xl:max-w-screen-2xl p-4">
+          <motion.div className="flex flex-col justify-center items-center mb-10">
             <Image
               src="/assets/install.svg"
               alt="signage"

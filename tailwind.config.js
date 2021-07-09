@@ -30,13 +30,10 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
       theme: {
-        blue: "#09044A",
-        primary: "#1CD6C0",
-        secondary: "#52e4bf",
         gray: "#F2F3F8",
         wooWhite: "#FCFCFC",
         purple: "#4019CE",
-        whitePurple: "#96588A",
+        lightPurple: "#96588A",
       },
     },
     spacing: {
@@ -185,6 +182,8 @@ module.exports = {
       inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
       none: "none",
       simple: "0px 0px 11px -2px rgba(0, 0, 0, 0.3);",
+      base: "0px 4px 18px rgba(64, 25, 206, 0.1);",
+      button: "0px 4px 15px rgba(64, 25, 206, 0.35);",
     },
     contrast: {
       0: "0",

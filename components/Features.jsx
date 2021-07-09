@@ -11,14 +11,14 @@ export const Features = () => {
     >
       <motion.div
         variants={fadeInUp}
-        className=" flex-col bg-white w-full h-auto py-10 shadow-simple mb-28 flex justify-center items-center"
+        className=" flex-col bg-white w-full h-auto py-10 shadow-base mb-28 flex justify-center items-center"
       >
         <motion.h2 variants={fadeInUp} className="title ">
           funcionalidades
         </motion.h2>
 
-        <motion.div className="flex justify-between items-center w-full max-w-7xl">
-          <motion.div className="flex flex-col justify-center items-center">
+        <motion.div className="flex flex-col lg:flex-row justify-between items-center w-full lg:max-w-screen-lg 2xl:max-w-screen-2xl p-4">
+          <motion.div className="flex flex-col justify-center items-center mb-7">
             <Image
               src="/assets/products.svg"
               alt="signage"
@@ -32,7 +32,7 @@ export const Features = () => {
               variáveis.
             </p>
           </motion.div>
-          <motion.div className="flex flex-col justify-center items-center">
+          <motion.div className="flex flex-col justify-center items-center mb-7">
             <Image
               src="/assets/clients.svg"
               alt="signage"
@@ -45,7 +45,7 @@ export const Features = () => {
               Sincronização individual ou em bulk de clientes
             </p>
           </motion.div>
-          <motion.div className="flex flex-col justify-center items-center">
+          <motion.div className="flex flex-col justify-center items-center mb-7">
             <Image
               src="/assets/orders.svg"
               alt="signage"

@@ -23,11 +23,11 @@ export default function (req, res) {
       "Empresa: " +
       req.body.company +
       " |  Cidade: " +
-      req.body.city +
+      req.body.number +
       " | Mensagem: " +
       req.body.message,
     html: `<div>De: ${req.body.name} - Email: ${req.body.email}
-    <br>Empresa: ${req.body.company} - Cidade: ${req.body.city} 
+    <br>Empresa: ${req.body.company} - Cidade: ${req.body.number} 
     <br><br>${req.body.message}</div>`,
   };
   transporter.sendMail(mailData, function (err, result) {

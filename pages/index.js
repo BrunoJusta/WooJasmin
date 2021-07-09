@@ -22,7 +22,7 @@ export default function Home() {
       exit={{ opacity: 0 }}
       initial="initial"
       animate="animate"
-      className="relative flex flex-col items-center w-full h-full pb-20 pt-24"
+      className="relative z-10 flex flex-col items-center w-full h-full pb-20 pt-24"
     >
       <Head>
         <title>WooJasmin - Integação do Jasmin com WooCommerce</title>
@@ -50,40 +50,50 @@ export default function Home() {
       >
         <motion.div
           variants={fadeInUp}
-          className="relative flex justify-center items-center xs:mb-20 md:mb-40"
+          className="relative w-full lg:max-w-screen-lg 2xl:max-w-screen-2xl flex flex-col md:flex-row justify-center items-center mb-48 mt-20 p-4"
         >
           <motion.div
             variants={fadeInUp}
-            className="w-full max-w-7xl flex flex-col justify-center items-start xs:mb-20 md:mb-40"
+            className="w-full flex flex-col justify-center items-center md:items-start mb-5 mt-5"
           >
-            <h1 className="main-title">
-              Integre o Software Jasmin com a
-              <br /> sua Loja e Automatize Processos
+            <h1 className="main-title mb-5">
+              Integre o Software Jasmin com a sua Loja e Automatize Processos
             </h1>
-            <p className="description">
+            <p className="description mb-5">
               Sincronize produtos, clientes e encomendas com apenas um clique.
             </p>
+            <a className="button button-main shadow-button">
+              Entrar em Contacto
+            </a>
           </motion.div>
           <motion.div
             variants={fadeInUp}
-            className="relative flex justify-center items-center xs:mb-20 md:mb-40"
+            className="relative flex justify-center items-center"
           >
             <Image
               src="/assets/screens.png"
               alt="signage"
               className="pointer-events-none"
-              width={594}
-              height={349}
+              width={900}
+              height={549}
             />
           </motion.div>
         </motion.div>
 
-        {/*   <motion.div
+        <motion.div
           exit={{ opacity: 0 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className={`anime right-0 top-0 w-20 h-20`}
-        ></motion.div> */}
+          className={`absolute -z-10 right-0 top-0 w-auto h-auto`}
+        >
+          <Image
+            src="/assets/blob.svg"
+            alt="signage"
+            className="pointer-events-none"
+            width={1211}
+            height={859}
+          />
+        </motion.div>
         <Features />
         <Install />
 

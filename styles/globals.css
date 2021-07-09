@@ -4,16 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.title {
-  @apply font-roboto font-bold tracking-widest text-4xl text-theme-purple uppercase mb-24;
+.main-title {
+  @apply font-roboto font-bold tracking-wide text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-theme-purple;
 }
 
-.main-title {
-  @apply font-roboto font-bold tracking-wide text-4xl text-theme-purple;
+.title {
+  @apply font-roboto font-bold tracking-widest text-2xl md:text-3xl lg:text-4xl text-theme-purple uppercase mb-16;
 }
 
 .sub-title {
-  @apply font-roboto font-bold tracking-wider text-tiny text-black uppercase mb-7;
+  @apply font-roboto font-bold tracking-wider text-tiny text-black uppercase mb-4;
 }
 
 .text {
@@ -21,9 +21,20 @@
 }
 
 .description {
-  @apply font-roboto font-normal text-2xl text-black;
+  @apply font-roboto font-normal text-base md:text-lg lg:text-xl 2xl:text-2xl text-black;
 }
 
+.button {
+  @apply cursor-pointer uppercase px-4 py-1 rounded-full transform hover:scale-105 transition-all duration-300 ease-in-out;
+}
+
+.button-main {
+  @apply text-theme-wooWhite bg-gradient-to-r from-theme-purple to-theme-lightPurple  font-light text-base md:text-lg lg:text-xl 2xl:text-2xl self-center bg-theme-purple hover:from-theme-lightPurple hover:to-theme-purple;
+}
+
+.button-secondary {
+  @apply text-sm md:text-base bg-theme-purple bg-opacity-20 border-2 border-theme-purple text-theme-purple font-normal hover:text-gray-200 hover:bg-theme-purple self-center;
+}
 html,
 body {
   padding: 0;
@@ -37,12 +48,10 @@ body {
 
 .anime {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   background-color: #f2f3f8;
   box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.3);
   border-radius: 30% 70% 20% 40%;
-  animation: transform_one 20s ease-in-out infinite both alternate,
-    movement_one 40s ease-in-out infinite both;
 }
 
 a {
