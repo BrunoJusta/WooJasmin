@@ -38,7 +38,7 @@ export const Contacts = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let data = { name, email, company, contact, message };
+    let data = { name, email, company, number, message };
 
     fetch("/api/contact", {
       method: "POST",
@@ -76,7 +76,7 @@ export const Contacts = () => {
         variants={fadeInUp}
         className=" flex-col bg-white w-full h-auto py-10 shadow-base mb-28 flex justify-center items-center"
       >
-        <motion.h2 variants={fadeInUp} className="title">
+        <motion.h2 id="contact" variants={fadeInUp} className="title">
           Fale Connosco
         </motion.h2>
         <form
@@ -167,7 +167,7 @@ export const Contacts = () => {
           <input type="submit" className="button button-secondary" />
         </form>
       </motion.div>
-      <ToastContainer />
+      <ToastContainer className="absolute z-50" />
     </motion.div>
   );
 };

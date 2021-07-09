@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import React, { Component } from "react";
 import { Contacts } from "../components/Contacts";
 import { Features } from "../components/Features";
@@ -10,13 +10,6 @@ import { animate, motion } from "framer-motion";
 import { fadeInUp, home_stagger } from "../animations/index.js";
 
 export default function Home() {
-  const videoStyle = {
-    borderRadius: "0.3rem",
-    borderWidth: "5px",
-    borderColor: "#FFFFFF",
-    boxShadow: "0px 0px 11px -2px #a8a8a8",
-    minWidth: "340px",
-  };
   return (
     <motion.div
       exit={{ opacity: 0 }}
@@ -38,7 +31,7 @@ export default function Home() {
         />
         <meta
           property="keywords"
-          content="woojasmin, plugin, sincronizar, automatico, personaliza"
+          content="woojasmin, plugin, sincronizar, automatico, personalizar"
           key="keywords"
         />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -50,7 +43,7 @@ export default function Home() {
       >
         <motion.div
           variants={fadeInUp}
-          className="relative w-full lg:max-w-screen-lg 2xl:max-w-screen-2xl flex flex-col md:flex-row justify-center items-center mb-48 mt-20 p-4"
+          className="relative w-full lg:max-w-screen-lg 2xl:max-w-screen-2xl flex flex-col md:flex-row justify-center items-center mb-48 mt-0 md:mt-20 p-4"
         >
           <motion.div
             variants={fadeInUp}
@@ -62,9 +55,11 @@ export default function Home() {
             <p className="description mb-5">
               Sincronize produtos, clientes e encomendas com apenas um clique.
             </p>
-            <a className="button button-main shadow-button">
-              Entrar em Contacto
-            </a>
+            <Link to="contact" spy={true} smooth={true}>
+              <a className="button button-main shadow-button mb-10 md:mb-0">
+                Entrar em Contacto
+              </a>
+            </Link>
           </motion.div>
           <motion.div
             variants={fadeInUp}
