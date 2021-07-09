@@ -30,8 +30,8 @@ export const Install = () => {
             />
             <h3 className="sub-title mt-4">Instalação</h3>
             <p className="text">
-              Sincronização individual ou em bulk de produtos simples ou
-              variáveis.
+              Não precisa de perder tempo a instalar e a configurar o plugin
+              WooJasmin, a nossa equipa técnica fá-lo por si.
             </p>
           </motion.div>
 
@@ -43,10 +43,10 @@ export const Install = () => {
               width={84}
               height={84}
             />
-            <h3 className="sub-title mt-4">Produtos</h3>
+            <h3 className="sub-title mt-4">Personalizável</h3>
             <p className="text">
-              Sincronização individual ou em bulk de produtos simples ou
-              variáveis.
+              Precisa de uma funcionalidade à medida do seu negócio? Entre em
+              contacto connosco e arranjamos uma solução.
             </p>
           </motion.div>
         </motion.div>
